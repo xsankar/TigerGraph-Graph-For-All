@@ -1,0 +1,485 @@
+[
+  {
+    "(@@fraudRing)": [
+      "201",
+      "1",
+      "101"
+    ]
+  },
+  {
+    "nodes": [
+      {
+        "attributes": {
+          "@no_of_cycles": 5,
+          "id": "201",
+          "v_type": 1
+        },
+        "v_id": "201",
+        "v_type": "account"
+      },
+      {
+        "attributes": {
+          "@no_of_cycles": 4,
+          "id": "101",
+          "v_type": 1
+        },
+        "v_id": "101",
+        "v_type": "account"
+      },
+      {
+        "attributes": {
+          "@no_of_cycles": 5,
+          "id": "1",
+          "v_type": 1
+        },
+        "v_id": "1",
+        "v_type": "account"
+      }
+    ]
+  },
+  {
+    "(@@edges_str_list)": [
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:10:00",
+          "eType": "send",
+          "fromID": "101",
+          "toID": "107"
+        },
+        {
+          "amount": 25,
+          "date_time": "2021-12-14 09:35:00",
+          "eType": "send",
+          "fromID": "107",
+          "toID": "106"
+        },
+        {
+          "amount": 25,
+          "date_time": "2021-12-14 09:55:00",
+          "eType": "send",
+          "fromID": "106",
+          "toID": "101"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:10:00",
+          "eType": "send",
+          "fromID": "101",
+          "toID": "107"
+        },
+        {
+          "amount": 25,
+          "date_time": "2021-12-14 09:40:00",
+          "eType": "send",
+          "fromID": "107",
+          "toID": "108"
+        },
+        {
+          "amount": 25,
+          "date_time": "2021-12-14 10:00:00",
+          "eType": "send",
+          "fromID": "108",
+          "toID": "101"
+        }
+      ],
+      [
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:10:00",
+          "eType": "send",
+          "fromID": "1",
+          "toID": "7"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:35:00",
+          "eType": "send",
+          "fromID": "7",
+          "toID": "6"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:00:00",
+          "eType": "send",
+          "fromID": "6",
+          "toID": "1"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:00:00",
+          "eType": "send",
+          "fromID": "101",
+          "toID": "1010"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:25:00",
+          "eType": "send",
+          "fromID": "1010",
+          "toID": "1014"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:45:00",
+          "eType": "send",
+          "fromID": "1014",
+          "toID": "103"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 10:05:00",
+          "eType": "send",
+          "fromID": "103",
+          "toID": "101"
+        }
+      ],
+      [
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:05:00",
+          "eType": "send",
+          "fromID": "1",
+          "toID": "15"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:30:00",
+          "eType": "send",
+          "fromID": "15",
+          "toID": "13"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:55:00",
+          "eType": "send",
+          "fromID": "13",
+          "toID": "2"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:20:00",
+          "eType": "send",
+          "fromID": "2",
+          "toID": "1"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-15 09:00:00",
+          "eType": "send",
+          "fromID": "201",
+          "toID": "200"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:15:00",
+          "eType": "send",
+          "fromID": "200",
+          "toID": "207"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:40:00",
+          "eType": "send",
+          "fromID": "207",
+          "toID": "206"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:05:00",
+          "eType": "send",
+          "fromID": "206",
+          "toID": "201"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:05:00",
+          "eType": "send",
+          "fromID": "101",
+          "toID": "1015"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:30:00",
+          "eType": "send",
+          "fromID": "1015",
+          "toID": "1013"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 09:50:00",
+          "eType": "send",
+          "fromID": "1013",
+          "toID": "102"
+        },
+        {
+          "amount": 50,
+          "date_time": "2021-12-14 10:10:00",
+          "eType": "send",
+          "fromID": "102",
+          "toID": "101"
+        }
+      ],
+      [
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:00:00",
+          "eType": "send",
+          "fromID": "1",
+          "toID": "10"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:25:00",
+          "eType": "send",
+          "fromID": "10",
+          "toID": "14"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:50:00",
+          "eType": "send",
+          "fromID": "14",
+          "toID": "3"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:15:00",
+          "eType": "send",
+          "fromID": "3",
+          "toID": "1"
+        }
+      ],
+      [
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:15:00",
+          "eType": "send",
+          "fromID": "1",
+          "toID": "12"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:40:00",
+          "eType": "send",
+          "fromID": "12",
+          "toID": "11"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:05:00",
+          "eType": "send",
+          "fromID": "11",
+          "toID": "9"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:25:00",
+          "eType": "send",
+          "fromID": "9",
+          "toID": "1"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-15 09:00:00",
+          "eType": "send",
+          "fromID": "201",
+          "toID": "200"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:10:00",
+          "eType": "send",
+          "fromID": "200",
+          "toID": "215"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:35:00",
+          "eType": "send",
+          "fromID": "215",
+          "toID": "213"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:00:00",
+          "eType": "send",
+          "fromID": "213",
+          "toID": "202"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:25:00",
+          "eType": "send",
+          "fromID": "202",
+          "toID": "201"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-15 09:00:00",
+          "eType": "send",
+          "fromID": "201",
+          "toID": "200"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:20:00",
+          "eType": "send",
+          "fromID": "200",
+          "toID": "212"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:45:00",
+          "eType": "send",
+          "fromID": "212",
+          "toID": "211"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:10:00",
+          "eType": "send",
+          "fromID": "211",
+          "toID": "209"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:30:00",
+          "eType": "send",
+          "fromID": "209",
+          "toID": "201"
+        }
+      ],
+      [
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:20:00",
+          "eType": "send",
+          "fromID": "1",
+          "toID": "5"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 09:45:00",
+          "eType": "send",
+          "fromID": "5",
+          "toID": "4"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:10:00",
+          "eType": "send",
+          "fromID": "4",
+          "toID": "16"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:30:00",
+          "eType": "send",
+          "fromID": "16",
+          "toID": "8"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-13 10:35:00",
+          "eType": "send",
+          "fromID": "8",
+          "toID": "1"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-15 09:00:00",
+          "eType": "send",
+          "fromID": "201",
+          "toID": "200"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:05:00",
+          "eType": "send",
+          "fromID": "200",
+          "toID": "210"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:30:00",
+          "eType": "send",
+          "fromID": "210",
+          "toID": "214"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:55:00",
+          "eType": "send",
+          "fromID": "214",
+          "toID": "203"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:20:00",
+          "eType": "send",
+          "fromID": "203",
+          "toID": "201"
+        }
+      ],
+      [
+        {
+          "amount": 50,
+          "date_time": "2021-12-15 09:00:00",
+          "eType": "send",
+          "fromID": "201",
+          "toID": "200"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:25:00",
+          "eType": "send",
+          "fromID": "200",
+          "toID": "205"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 09:50:00",
+          "eType": "send",
+          "fromID": "205",
+          "toID": "204"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:15:00",
+          "eType": "send",
+          "fromID": "204",
+          "toID": "216"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:35:00",
+          "eType": "send",
+          "fromID": "216",
+          "toID": "208"
+        },
+        {
+          "amount": 10,
+          "date_time": "2021-12-15 10:40:00",
+          "eType": "send",
+          "fromID": "208",
+          "toID": "201"
+        }
+      ]
+    ]
+  }
+]

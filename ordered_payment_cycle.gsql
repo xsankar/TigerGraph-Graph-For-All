@@ -1,0 +1,70 @@
+CREATE QUERY ordered_payment_cycle() FOR GRAPH Tumbler { // Order Payment Cycle
+  TYPEDEF tuple<STRING eType, STRING fromID, STRING toID, DOUBLE amount, DATETIME date_time> cycleEdge;
+  ListAccum<ListAccum<VERTEX<account>>> @@cycles_list;
+  ListAccum<ListAccum<EDGE>> @@edges_list;
+  SetAccum<Edge> @@edge_set;
+  ListAccum<Edge> @@edge_list;
+  ListAccum<cycleEdge> @@edges_str;  
+  ListAccum<ListAccum<cycleEdge>> @@edges_str_list;
+  HeapAccum<cycleEdge> (100, date_time ASC) @@edgeHeap;
+  SetAccum<VERTEX<account>> @@cycle_set;
+  // List of nodes in any ring
+  SetAccum<Vertex<account>> @@fraudRing;
+  // Internal flags
+  SumAccum<INT> @no_of_cycles = 0;
+  // Get all cycles
+  @@cycles_list = rt_cycle(); 
+  //PRINT(@@cycles_list);
+  FOREACH c_list IN @@cycles_list DO
+    //PRINT(c_list);
+    // Turn the list into a set for membership check with IN. IN requires a set not a list
+    @@cycle_set.clear();
+    FOREACH cset IN c_list DO
+      @@cycle_set += cset;
+    END;
+    // Find all edges and heap them by payment date to get the head node
+    //ListAccum<VERTEX<account>> @@aNode = c_list.get(0);
+    Start = {c_list};
+    res = SELECT s FROM Start:s - (send:e) -> account:tgt
+          WHERE tgt IN @@cycle_set
+          ACCUM
+            @@edge_set += e,
+            // convert to a tuple and store
+            @@edgeHeap += cycleEdge(e.type, s.id, tgt.id, e.amount, e.date_time)
+          //POST-ACCUM
+            //@@edges_list += s.@edges,
+            //@@fraudRing +=s
+          ; 
+    //PRINT(@@edgeHeap);
+    FOREACH edg in @@edge_set DO
+      @@edge_list += edg;
+    END;
+    @@edge_set.clear();
+    @@edges_list += @@edge_list;
+    @@edge_list.clear();
+    STRING aNode = @@edgeHeap.top().fromID;
+    x = SELECT s from Start:s 
+        WHERE s.id == aNode
+        POST_ACCUM              
+          s.@no_of_cycles += 1,
+          @@fraudRing += s;
+    // Convert the set to a list - list(set) won't work
+    WHILE @@edgeHeap.size() > 0 DO
+      @@edges_str += @@edgeHeap.pop();
+    END;
+    @@edges_str_list += @@edges_str;
+    @@edges_str.clear();
+    //@@edgeHeap.clear();
+  END;
+  // PRINT(@@cycles_list);
+  PRINT(@@edges_list);
+  // PRINT(@@edges_str_list);
+  PRINT(@@fraudRing);
+  // Print all the nodes with high cycle
+  Start = {@@fraudRing};
+  nodes = SELECT s FROM Start:s - (:t) -> :tgt
+          //WHERE s.@no_of_cycles > 4
+     ;
+  PRINT nodes;
+  PRINT(@@edges_str_list);
+}
