@@ -13,6 +13,8 @@ CREATE QUERY ordered_payment_cycle() FOR GRAPH Tumbler { // Order Payment Cycle
   // Internal flags
   SumAccum<INT> @no_of_cycles = 0;
   // Get all cycles
+  // Modified distributed Rocha–Thatte cycle detection algorithm
+  // from TigetGraph GSQL Graph Algorithms
   @@cycles_list = rt_cycle(); 
   //PRINT(@@cycles_list);
   FOREACH c_list IN @@cycles_list DO
