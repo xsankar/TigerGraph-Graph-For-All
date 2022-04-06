@@ -1,12 +1,13 @@
 #  Graph For A Better Token Economy
 **Contributors and Contact Information: [Krishna sankar @ksankar ]**
 
-**Problem Statement addressed (or explain your own): [ ]**
-
+**Problem Statement addressed :**
+* Virtual Assets (Crypto coins, NFTs, ...) enable under represented population
+* ... But the platforms are not as secure as they need to be. There should be a better way to enable the masses and usher the new improved kinder-gentler Web 3.0 & crypto currency platform
 **Description**: 
+* Immutable, Distributed, Unanimous & Secure DLT & Blockchain stack for Crypto currency & Web 3.0. While the other properties are well implemented, security is still a challenge
+* Specifically, this project addresses the detection of Fraud Rings (e.g., Money Laundering) & Camouflaged Fraud (e.g., Fake Product Reviews)
 
-Explain what your project is trying to accomplish and how you utilized graph technology to achieve those goals. 
-Describe how your submission is relevant to the problem statement and why it is impactful to the world. Remember to link your submission video here. 
 
 Tell us how your entry was the most...					
 
