@@ -1,5 +1,5 @@
-# Project Title
-**Contributers and Contact Information: [ ]**
+#  Graph For A Better Token Economy
+**Contributors and Contact Information: [Krishna sankar @ksankar ]**
 
 **Problem Statement addressed (or explain your own): [ ]**
 
