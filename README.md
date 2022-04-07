@@ -57,17 +57,17 @@
 ## What's next for Graph For A Better Token Economy 
 ### This is only the beginning !
 1. Scale ! Load Bitcoin/Ethereum blockchains and apply the algorithms
- a. Cross-Ledger tracking of fraud rings 
+ * Cross-Ledger tracking of fraud rings 
 2. Fine grained temporals
- a. There could be many such rings by the same actors, so need to separate the rings by time
-  b. solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
- c. Opportunity for Payment Networks in TigerGraph Graph Algorithms
+ * There could be many such rings by the same actors, so need to separate the rings by time
+  * solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
+ * Opportunity for Payment Networks in TigerGraph Graph Algorithms
 3. More expressive Graph schema with derived runtime attributes, especially to track cross-ledger behaviors
 4. Explore Graph Motif extraction, Weighted Graphs
 5. Graph Neural Networks leveraging the extended dynamic attributes
 6. Entity Resolution
- a. Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
- b. Probably via highest measure of eigenvalue centrality
+ * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
+ * Probably via highest measure of eigenvalue centrality
 
 ## Thanks for the opportunity, Enjoyed the journey a lot !!
 
@@ -81,9 +81,9 @@ This project can be run fully in TigerGraph environment via the GraphStudio
 1. Clone repository
 7. Read through the file TG_Graph_For_All.pdf
  * It has the problem, sample fraud ring graphs and other details
-2. Create Schema
-3. Map the Data - data file 
-4. Load the data - data file 
+2. Create Schema - Details are in the TG_Graph_For_All.pdf
+3. Map the Data - data file transactions.csv
+4. Load the data - data file transactions.csv
 5. Copy the two GSQL in Edit Queries
  * ordered_payment_cycle.gsql
  * rt_cycle.GSQL - This the modified Rocha-Thatte cycle algorithm from GSQL Graph Algorithms
