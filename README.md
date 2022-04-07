@@ -57,17 +57,17 @@
 ## What's next for Graph For A Better Token Economy 
 ### This is only the beginning !
 1. Scale ! Load Bitcoin/Ethereum blockchains and apply the algorithms
- * Cross-Ledger tracking of fraud rings 
+ a. Cross-Ledger tracking of fraud rings 
 2. Fine grained temporals
- * There could be many such rings by the same actors, so need to separate the rings by time
-  * solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
- * Opportunity for Payment Networks in TigerGraph Graph Algorithms
+ a. There could be many such rings by the same actors, so need to separate the rings by time
+  b. solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
+ c. Opportunity for Payment Networks in TigerGraph Graph Algorithms
 3. More expressive Graph schema with derived runtime attributes, especially to track cross-ledger behaviors
 4. Explore Graph Motif extraction, Weighted Graphs
 5. Graph Neural Networks leveraging the extended dynamic attributes
 6. Entity Resolution
- * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
- * Probably via highest measure of eigenvalue centrality
+ a. Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
+ b. Probably via highest measure of eigenvalue centrality
 
 ## Thanks for the opportunity, Enjoyed the journey a lot !!
 
