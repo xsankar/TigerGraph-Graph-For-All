@@ -81,12 +81,14 @@ This project can be run fully in TigerGraph environment via the GraphStudio
 1. Clone repository
 7. Read through the file TG_Graph_For_All.pdf
  * It has the problem, sample fraud ring graphs and other details
-2. Create Schema - Details are in the TG_Graph_For_All.pdf
+2. Create Schema - Details are in the TG_Graph_For_All.pdf Page 8 and 9.
 3. Map the Data - data file transactions.csv
+ 1. Only the account vertex and the send edge need to be mapped and loaded. Rest of the vertices and edges are for the future
 4. Load the data - data file transactions.csv
 5. Copy the two GSQL in Edit Queries
  * ordered_payment_cycle.gsql
  * rt_cycle.GSQL - This the modified Rocha-Thatte cycle algorithm from GSQL Graph Algorithms
 6. Run the query ordered_payment_cycle
- * The file ops_02_output.txt shows a sample output to check
- 7. Read through the file 
+ * The files ops_02_output.txt and ops_02_detailed_output.txt show a sample output to check
+ * Also check the output with the graph in Page 4 of TG_Graph_For_All.pdf. TigerGraph finds all rings and orders them nicely !
+ 
