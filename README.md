@@ -5,6 +5,8 @@
 * Virtual Assets (Crypto coins, NFTs, ...) enable under represented population
 * ... But the platforms are not as secure as they need to be. There should be a better way to enable the masses and usher the new improved kinder-gentler Web 3.0 & crypto currency platform
 
+[Link to YouTube video](https://youtu.be/1v9GJOV_pag)
+
 ## Description
 * Immutable, Distributed, Unanimous & Secure DLT & Blockchain stack for Crypto currency & Web 3.0. While the other properties are well implemented, security is still a challenge
 * Specifically, this project addresses the detection of Fraud Rings (e.g., Money Laundering) & Camouflaged Fraud (e.g., Fake Product Reviews)
