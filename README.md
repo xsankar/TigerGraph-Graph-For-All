@@ -83,13 +83,14 @@ This project can be run fully in TigerGraph environment via the GraphStudio
 1. Clone repository
 7. Read through the file TG_Graph_For_All.pdf
    * It has the problem, sample fraud ring graphs and other details
-2. Either import the .tar.gz file or create everything from scratch
+2. Either import the .tar.gz file (#4 Below) or create everything from scratch (#5 to #10 below)
 2. Use the "Import An Existing Solution" in graph Studio to import the export_054284246.tar.gz
    1. Select the Tumbler 
    1. Go To Write Queries
    1. Run the query "ordered-payment-cycle"
    1. Check the visualization - Select the "tree" visualization type on the right hand bottom
    1. Inspect the JSON by selecting the {}
+   1. Check the output with the graph in Page 4 of TG_Graph_For_All.pdf. TigerGraph finds all rings and orders them nicely !
 2. Only do the following if you want to create from scratch
 2. Create Schema - Details are in the TG_Graph_For_All.pdf Page 8 and 9.
 3. Map the Data - data file transactions.csv
