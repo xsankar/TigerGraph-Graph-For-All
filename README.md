@@ -82,21 +82,23 @@
 This project can be run fully in TigerGraph environment via the GraphStudio
 1. Clone repository
 7. Read through the file TG_Graph_For_All.pdf
- * It has the problem, sample fraud ring graphs and other details
+   * It has the problem, sample fraud ring graphs and other details
+2. Either import the .tar.gz file or create everything from scratch
 2. Use the "Import An Existing Solution" in graph Studio to import the export_054284246.tar.gz
- 1. Select the Tumbler 
- 1. Go To Write Queries
- 1. Run the query "ordered-payment-cycle"
- 1. Check the visualization - Select the "tree" visualization type on the right hand bottom
- 1. Inspect the JSON by selecting the {}
+   1. Select the Tumbler 
+   1. Go To Write Queries
+   1. Run the query "ordered-payment-cycle"
+   1. Check the visualization - Select the "tree" visualization type on the right hand bottom
+   1. Inspect the JSON by selecting the {}
+2. Only do the following if you want to create from scratch
 2. Create Schema - Details are in the TG_Graph_For_All.pdf Page 8 and 9.
 3. Map the Data - data file transactions.csv
- 1. Only the account vertex and the send edge need to be mapped and loaded. Rest of the vertices and edges are for the future
+   1. Only the account vertex and the send edge need to be mapped and loaded. Rest of the vertices and edges are for the future
 4. Load the data - data file transactions.csv
 5. Copy the two GSQL in Edit Queries
- * ordered_payment_cycle.gsql
- * rt_cycle.GSQL - This the modified Rocha-Thatte cycle algorithm from GSQL Graph Algorithms
-6. Run the query ordered_payment_cycle
- * The files ops_02_output.txt and ops_02_detailed_output.txt show a sample output to check
- * Also check the output with the graph in Page 4 of TG_Graph_For_All.pdf. TigerGraph finds all rings and orders them nicely !
+   * ordered_payment_cycle.gsql
+   * rt_cycle.GSQL - This the modified Rocha-Thatte cycle algorithm from GSQL Graph Algorithms
+6. Run the query ordered-payment-cycle
+   * The files ops_02_output.txt and ops_02_detailed_output.txt show a sample output to check
+   * Also check the output with the graph in Page 4 of TG_Graph_For_All.pdf. TigerGraph finds all rings and orders them nicely !
  
