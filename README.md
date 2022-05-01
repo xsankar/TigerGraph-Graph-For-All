@@ -20,18 +20,18 @@
   * Pragmas
     1. Relationships need not be symmetric or reciprocal
     1. There is a sequence to the edges i.e. Sequenced Edges
-    1. The edge has a temporal, monotonic component i.e. Temporal Edges
+    1. The edges have a temporal, monotonic component i.e. Temporal Edges
   * Examples
     * Payment Networks Forensics
     * Fake Reviews
     * Fake News
   * Challenges
     * Breaks some of the assumptions in traditional graph algorithms
-    * Traditional Graph Algorithms are mot as widely applicable
-    * We need more specific concepts
+    * Traditional Graph Algorithms are not as widely applicable
     * In a payment network, edges rule
       * Algorithmically, nodes (while important) have a lesser role
-  * Differences
+    * In short, we need more specific concepts
+  * Differences from traditional networks (social et al)
     * PageRank doesn’t make sense
       * Just because amzn paid someone doesn’t make them any more important
     * Community detection or k-clique are not that relevant
@@ -44,7 +44,7 @@
 * Money Laundering Layering is not just one cycle
   * But multiple ordered cycles with a fraud actor at the helm
 * Detecting fraud ring is literally finding the proverbial needle in a haystack
-  * Class imbalance, Long Fraud Chains
+  * Class imbalance, Long Fraud Chains spanning different crypto currency ledgers
 
 ## Approach a.k.a How we built it
 1. Layered approach with well defined pipeline stages
@@ -111,7 +111,7 @@
 
 This project can be run fully in TigerGraph environment via the GraphStudio
 1. Clone repository
-7. Read through the file TG_Graph_For_All.pdf
+7. Read through the file Graph+AI.pdf
    * It has the problem, sample fraud ring graphs and other details
 2. Either import the .tar.gz file (#4 Below) or create everything from scratch (#5 to #10 below)
 2. Use the "Import An Existing Solution" in graph Studio to import the export_054284246.tar.gz
@@ -131,5 +131,5 @@ This project can be run fully in TigerGraph environment via the GraphStudio
    * rt_cycle.GSQL - This the modified Rocha-Thatte cycle algorithm from GSQL Graph Algorithms
 6. Run the query ordered-payment-cycle
    * The files ops_02_output.txt and ops_02_detailed_output.txt show a sample output to check
-   * Also check the output with the graph in Page 4 of TG_Graph_For_All.pdf. TigerGraph finds all rings and orders them nicely !
+   * Also check the output with the graph in Page 7 of Graph+AI.pdf. TigerGraph finds all rings and orders them nicely !
  
