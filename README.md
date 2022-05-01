@@ -16,11 +16,12 @@
 * Tackle one of the complex fraud pattern in a scalable, extensible way
 
 ## Challenges
-* Non-Reciprocal, Sequenced, Temporal Networks
+* Non-Reciprocal, Non-Transitive, Sequenced, Temporal Networks
   * Pragmas
     1. Relationships need not be symmetric or reciprocal
     1. There is a sequence to the edges i.e. Sequenced Edges
     1. The edges have a temporal, monotonic component i.e. Temporal Edges
+    1. Non-Transitive (Except for fraud rings)
   * Examples
     * Payment Networks Forensics
     * Fake Reviews
