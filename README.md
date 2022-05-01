@@ -97,9 +97,9 @@
    * Edges are not 1st class objects
    * HeapAccum<EDGE> (100, .date_time ASC) would be very helpful
 1. Fine grained temporals : No native support for Time Series or to unroll time
-   * Add Date Tree as an internal property
+   * Add Date Tree as an internal default optional property
    * Feature Engineering for Graph Neural Networks 
-     * I know it is a priority for TigerGraph product side
+     * I know this is a priority for TigerGraph product management
 
 ## Thanks for the opportunity, Enjoyed the journey a lot !!
 
