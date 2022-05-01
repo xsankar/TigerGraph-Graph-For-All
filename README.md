@@ -92,6 +92,9 @@
    * Probably via highest measure of eigenvalue centrality
 
 ## TigerGraph Feature Requests
+1. res = SELECT s FROM Start:s - (send:e) -> account:tgt
+		WHERE tgt IN @@cycle_set
+   [](error_01.png)
 1. Lots of object conversions because of restrictions in the object hierarchy
    * ListAccum<SetAccum<.. Won’t work
    * Edges are not 1st class objects
