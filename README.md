@@ -37,25 +37,25 @@
     * Community detection or k-clique are not that relevant
     * Connected component is not that informative either
 * Payment network is very different from social or other networks
- * Temporal, monotonic time
- * Not symmetric
- * Other attributes (like amount) matters
- * Many of the concepts like connected components and page rank do not mean much
+  * Temporal, monotonic time
+  * Not symmetric
+  * Other attributes (like amount) matters
+  * Many of the concepts like connected components and page rank do not mean much
 * Money Laundering Layering is not just one cycle
- * But multiple ordered cycles with a fraud actor at the helm
+  * But multiple ordered cycles with a fraud actor at the helm
 * Detecting fraud ring is literally finding the proverbial needle in a haystack
- * Class imbalance, Long Fraud Chains
+  * Class imbalance, Long Fraud Chains
 
 ## Approach a.k.a How we built it
 1. Layered approach with well defined pipeline stages
- * Overlay fraud rings progressively
- * Narrow down and organize the vertices as we progress
- * Always keep time sequencing in the processing
+   * Overlay fraud rings progressively
+   * Narrow down and organize the vertices as we progress
+   * Always keep time sequencing in the processing
 2. Customize relevant gsql graph algorithms
- * e.g., Rocha-Thatte Cycle Detection, but it is unordered 
- * Also need to combine cycles and find the fraud actor at the helm
+   * e.g., Rocha-Thatte Cycle Detection, but it is unordered 
+   * Also need to combine cycles and find the fraud actor at the helm
 3. Add runtime attributes to vertices
- * That will help the processing downstream the pipeline
+   * That will help the processing downstream the pipeline
 4, Start with a simple schema and add more elements as required
 5. Stay in TigerGraph as much as possible (more later)
 
@@ -65,31 +65,31 @@
 
 ## What we learned
 1. Graph representation is appropriate for DLT/Blockchain Fraud Detection
- * TigerGraph is a feature rich, flexible & scalable Graph Database well suited for this problem
- * But it requires disciplined thinking,  at times different than what we are used to  ! 
+   * TigerGraph is a feature rich, flexible & scalable Graph Database well suited for this problem
+   * But it requires disciplined thinking,  at times different than what we are used to  ! 
 2. Spend time thinking about & understanding the problem
 3. Make simplified assumptions and relax them as you progress (Layered approach)
 4. Think Graphs & more specifically Parallel Graphs ? It will take a little time to get used to that concept
- * Read, write & learn the patterns from the GSQL Graph Algorithms  and the GSQL code
+   * Read, write & learn the patterns from the GSQL Graph Algorithms  and the GSQL code
 5. Draw graph diagrams to visualize the problem - Draw the happy path 1st & then edge cases
 6. Create datasets depicting multiple scenarios ? 1st use a small dataset to test the algorithms
 7. Do as much in TigerGraph as possible, staying true to the platform
- * It is tempting to process a list outside (say in python), after a quick GSQL algorithm; don?t stop there, persist (using GSQL) until you have exhausted all graph ideas
+   * It is tempting to process a list outside (say in python), after a quick GSQL algorithm; don?t stop there, persist (using GSQL) until you have exhausted all graph ideas
 
 ## What's next for Graph For A Better Token Economy 
 ### This is only the beginning !
 1. Scale ! Load Bitcoin/Ethereum blockchains and apply the algorithms
- * Cross-Ledger tracking of fraud rings 
+   * Cross-Ledger tracking of fraud rings 
 2. Fine grained temporals
- * There could be many such rings by the same actors, so need to separate the rings by time
-  * solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
- * Opportunity for Payment Networks in TigerGraph Graph Algorithms
+   * There could be many such rings by the same actors, so need to separate the rings by time
+     * solution : time tree ?If you need to filter use vertices? ? TigerGraph pragma
+   * Opportunity for Payment Networks in TigerGraph Graph Algorithms
 3. More expressive Graph schema with derived runtime attributes, especially to track cross-ledger behaviors
 4. Explore Graph Motif extraction, Weighted Graphs
 5. Graph Neural Networks leveraging the extended dynamic attributes
 6. Entity Resolution
- * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
- * Probably via highest measure of eigenvalue centrality
+   * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
+   * Probably via highest measure of eigenvalue centrality
 
 ## TigerGraph Feature Request
 1. Lots of object conversions because of restrictions in the object hierarchy
