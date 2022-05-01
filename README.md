@@ -91,14 +91,14 @@
    * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
    * Probably via highest measure of eigenvalue centrality
 
-## TigerGraph Feature Request
+## TigerGraph Feature Requests
 1. Lots of object conversions because of restrictions in the object hierarchy
-   * <TG Feature Request> ListAccum<SetAccum<.. Won’t work
-   * <TG Feature Request> Edges are not 1st class objects
-   * <TG Feature Request> HeapAccum<EDGE> (100, .date_time ASC) would be very helpful
+   * ListAccum<SetAccum<.. Won’t work
+   * Edges are not 1st class objects
+   * HeapAccum<EDGE> (100, .date_time ASC) would be very helpful
 1. Fine grained temporals : No native support for Time Series or to unroll time
-   * <TG Feature Request> : Add Date Tree as an internal property
-   * <TG Feature Request> Feature Engineering for Graph Neural Networks 
+   * Add Date Tree as an internal property
+   * Feature Engineering for Graph Neural Networks 
      * I know it is a priority for TigerGraph product side
 
 ## Thanks for the opportunity, Enjoyed the journey a lot !!
