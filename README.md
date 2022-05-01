@@ -1,4 +1,4 @@
-#  Graph For A Better Token Economy
+#  Graph For A Better Tokenomics a.k.a. Token Economy
 **Contributors and Contact Information: [Krishna sankar @ksankar ]**
 
 ## Problem Statement 
@@ -16,6 +16,26 @@
 * Tackle one of the complex fraud pattern in a scalable, extensible way
 
 ## Challenges
+* Non-Reciprocal, Sequenced, Temporal Networks
+  * Pragmas
+    1. Relationships need not be symmetric or reciprocal
+    1. There is a sequence to the edges i.e. Sequenced Edges
+    1. The edge has a temporal, monotonic component i.e. Temporal Edges
+  * Examples
+    * Payment Networks Forensics
+    * Fake Reviews
+    * Fake News
+  * Challenges
+    * Breaks some of the assumptions in traditional graph algorithms
+    * Traditional Graph Algorithms are mot as widely applicable
+    * We need more specific concepts
+    * In a payment network, edges rule
+      * Algorithmically, nodes (while important) have a lesser role
+  * Differences
+    * PageRank doesn’t make sense
+      * Just because amzn paid someone doesn’t make them any more important
+    * Community detection or k-clique are not that relevant
+    * Connected component is not that informative either
 * Payment network is very different from social or other networks
  * Temporal, monotonic time
  * Not symmetric
@@ -70,6 +90,16 @@
 6. Entity Resolution
  * Need to understand heavy spans & differentiate between Exchanges, Tumblers, Mixers - Add Vertex type based customized logic
  * Probably via highest measure of eigenvalue centrality
+
+## TigerGraph Feature Request
+1. Lots of object conversions because of restrictions in the object hierarchy
+   * <TG Feature Request> ListAccum<SetAccum<.. Won’t work
+   * <TG Feature Request> Edges are not 1st class objects
+   * <TG Feature Request> HeapAccum<EDGE> (100, .date_time ASC) would be very helpful
+1. Fine grained temporals : No native support for Time Series or to unroll time
+   * <TG Feature Request> : Add Date Tree as an internal property
+   * <TG Feature Request> Feature Engineering for Graph Neural Networks 
+     * I know it is a priority for TigerGraph product side
 
 ## Thanks for the opportunity, Enjoyed the journey a lot !!
 
